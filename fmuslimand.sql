@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `feedbacks` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) DEFAULT '',
+  `current_address` text DEFAULT '',
+  `permanent_address` text DEFAULT '',
+  `national_id` varchar(500) DEFAULT '',
+  `passport_id` varchar(500) DEFAULT '',
+  `email` varchar(500) DEFAULT '',
+  `skype` varchar(500) DEFAULT '',
+  `cell` varchar(500) DEFAULT '',
+  `religion` varchar(500) DEFAULT '',
+  `personal_statement` text DEFAULT '',  
+  `academic_qualification` text DEFAULT '',  
+  `volunteering_skills` text DEFAULT '',
+  `knowledge_of_speciality` text DEFAULT '',
+  `personal_skills` text DEFAULT '',  
+  `hobbies_and_interests` text DEFAULT '',
+  `friend_list` text DEFAULT '',
+  `reference` text DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

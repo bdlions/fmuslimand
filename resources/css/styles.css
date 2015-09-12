@@ -1,0 +1,131 @@
+/*author:salma
+version:3.5/*
+
+/*---------------------fdmuslimand------------------------------k*/
+
+
+.reg_form_bg{
+    background-color: #EDF0F5!important;
+}
+.volunteer_form_bg{
+   background-color: #EDF0F5; 
+}
+.reg_form_content_bg{
+    background-color: #52B5CE!important;
+    margin: 50px 0!important;
+    padding: 25px 48px!important;
+    border-radius: 3px!important;
+}
+.reg_form_control_custom{
+    border-radius: 0;
+    height: 30px;
+    color: #D2999D;
+}
+.reg_form_label_style{
+    color: #333;
+    font-weight: bold;
+}
+.reg_required_style{
+    color:red;
+}
+
+.volunteer_form_content_bg{
+    background-color: #EDF0F5;
+    margin: 20px 0;
+    padding: 20px 40px;
+    border-radius: 5px; 
+}
+/*.volunterform_bg_style{
+   background-color:#52B5CE;
+   padding-bottom: 16px;
+   height: 300px; 
+   overflow-y: scroll; 
+   overflow-x: hidden;
+}*/
+
+.header_text_style1{
+    font-size: 30px;
+    color: #703684;
+}
+.header_text_style2{
+    color:#D33F6A;
+}
+
+.textarea_custom{
+    resize:none;
+    height: 30px;
+}
+.vlunteer_form_title{
+    font-size: 25px;
+    color:#703684;
+    text-align: center;
+}
+.volunteer_form_body_style{
+    background-color: #cococo;
+}
+
+.header_text_style{
+    color:#A50516;
+}
+.btn-custom{
+    background-color: #8C8D6D;
+}
+.btn-custom:hover{
+    background-color: #A50516;
+}
+.volunteerform_label_style{
+    color:#444C33;
+}
+.volunteer_form_text_style{
+    font-size: 11px;
+}
+
+.table_row_style{
+    /*color:#AF31F2;*/ 
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+    background-color: #fffffa;
+}
+.volunteer_row_style{
+    text-align: center; 
+    font-size: 13px!important;
+    font: 13.4px arial, sans-serif;
+    color:#5D3954;
+}
+.volunteer_row_style:hover{
+  background-color: #EDF0F5;
+  cursor: pointer;
+  color: #C85833;
+}
+.volunteer_view_style{
+    color: #D33F6A;
+    font-weight: bold;
+}
+
+
+@media (max-width: 480px) {
+   .form_responsive{
+     /*font-size: 9.2px;*/
+    }  
+}
+@media (min-width: 481px)and (max-width: 767px) {
+   .form_responsive{
+        
+    }  
+}
+
+@media (min-width: 768px)and (max-width: 991px) { 
+ .form_responsive{
+      
+    }   
+}
+
+@media (min-width: 992px) { 
+    .form_responsive{
+       
+    } 
+}
+
+

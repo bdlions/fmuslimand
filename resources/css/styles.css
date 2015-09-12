@@ -1,17 +1,27 @@
-/*author:salma
+/*author: Salma
+modified: A.K.M. NAZMUL ISLAM
 version:3.5/*
 
-/*---------------------fdmuslimand------------------------------k*/
+/*--------------------- member ------------------------------*/
 
-
+@font-face {
+    font-family: IcelandRegular;
+    src: url(../fonts/Iceland-Regular.ttf);
+}
+@font-face {
+    font-family: OswaldLight;
+    src: url(../fonts/Oswald-Light.ttf);
+}
 .reg_form_bg{
     background-color: #EDF0F5!important;
 }
-.volunteer_form_bg{
-   background-color: #EDF0F5; 
-}
+/*.volunteer_form_bg{
+    background-color: #EDF0F5; 
+}*/
 .reg_form_content_bg{
-    background-color: #52B5CE!important;
+    font-family: OswaldLight;
+    background-color: #703684!important;
+    color: #fff;
     margin: 50px 0!important;
     padding: 25px 48px!important;
     border-radius: 3px!important;
@@ -22,7 +32,7 @@ version:3.5/*
     color: #D2999D;
 }
 .reg_form_label_style{
-    color: #333;
+    color: #fff;
     font-weight: bold;
 }
 .reg_required_style{
@@ -43,22 +53,47 @@ version:3.5/*
    overflow-x: hidden;
 }*/
 
-.header_text_style1{
-    font-size: 30px;
-    color: #703684;
+.big_header_text{
+    font-family: monospace;
+    font-size: 44px;
+    color: #fff;
 }
-.header_text_style2{
-    color:#D33F6A;
+.small_header_text{
+    color: #80D8A8;
+    font-family: cursive;
+    font-size: 16.4px;
+}
+.vertical-text1, .vertical-text2 {
+    font-family: IcelandRegular;
+    font-size: 40px;
+    font-weight: bold;
+    color: #00B050;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.success_msg{
+    background-color: #5D8AA8; 
+    color: #FFBF00; 
+    text-align: center;
 }
 
 .textarea_custom{
     resize:none;
     height: 30px;
 }
-.vlunteer_form_title{
-    font-size: 25px;
-    color:#703684;
+.volunteer_feedback_bg{
+    background-color: #703684; 
+    padding-bottom: 16px; 
+    height: 456px; 
+    overflow-y: scroll; 
+}
+.volunteer_form_title{
+    font-size: 32px;
+    font-weight: bold;
+    color: lavender;
     text-align: center;
+    font-family: monospace;
 }
 .volunteer_form_body_style{
     background-color: #cococo;
@@ -81,51 +116,126 @@ version:3.5/*
 }
 
 .table_row_style{
-    /*color:#AF31F2;*/ 
+    font-family: cursive;
     font-weight: bold;
     font-size: 13px;
-    color: #333;
+    color: #703684;
     text-align: center;
-    background-color: #fffffa;
+    background-color: #fff;
+}
+.padding_top{
+    padding-top: 80px;
 }
 .volunteer_row_style{
+    font-family: monospace!important;
     text-align: center; 
     font-size: 13px!important;
     font: 13.4px arial, sans-serif;
-    color:#5D3954;
+    color: #fff;
+    font-weight: bold;
 }
 .volunteer_row_style:hover{
-  background-color: #EDF0F5;
-  cursor: pointer;
-  color: #C85833;
+    background-color: #FFE4C4;
+    cursor: pointer;
+    color: #C85833;
 }
-.volunteer_view_style{
-    color: #D33F6A;
+.volunteer_view_style, .volunteer_view_style:active,.volunteer_view_style:focus{
+    color: #00B050;
     font-weight: bold;
+}
+.volunteer_feedback_padding_top{
+    padding-top: 30px;
+}
+.volunteer_feedback_view_bg{
+    background-color: #703684;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.footer_bg{
+    background-color: #703684; 
+    text-align: left; 
+    font-weight: bold;
+}
+
+.footer_content{
+    font-family: monospace; 
+    color: #B8B8C8; 
+    vertical-align: middle; 
+    font-size: 15px; 
+    margin: 10px 0;
+
 }
 
 
 @media (max-width: 480px) {
-   .form_responsive{
-     /*font-size: 9.2px;*/
-    }  
+    .big_header_text{
+        font-size: 24px;
+    }
+    .small_header_text{
+        font-size: 14px;
+    }
+    .vertical-text1, .vertical-text2{
+        float: right;
+        font-size: 16px;
+    }
+    .vertical-text1{
+        margin-top: -25px;
+    }
+    .vertical-text2{
+        margin-top: -10px;
+    }
+    .volunteer_feedback_bg{
+        overflow-x: scroll;
+    }
 }
 @media (min-width: 481px)and (max-width: 767px) {
-   .form_responsive{
-        
-    }  
+    .big_header_text{
+        font-size: 30px;
+    }
+    .vertical-text1, .vertical-text2{
+        float: right;
+        font-size: 20px;
+    }
+    .vertical-text1{
+        margin-top: -95px;
+    }
+    .vertical-text2{
+        margin-top: -75px;
+    }
+    .volunteer_feedback_bg{
+        overflow-x: scroll;
+    }
 }
 
 @media (min-width: 768px)and (max-width: 991px) { 
- .form_responsive{
-      
-    }   
+    .vertical-text1, .vertical-text2{
+        float: right;
+    }
+    .vertical-text1{
+        margin-top: -115px;
+    }
+    .vertical-text2{
+        margin-top: -80px;
+    }
+    .volunteer_feedback_bg{
+        overflow-x: scroll;
+    }
 }
 
 @media (min-width: 992px) { 
-    .form_responsive{
-       
-    } 
+    .vertical-text1,.vertical-text2 {
+        transform: rotate(270deg);
+    }
+    .vertical-text1 {
+        top: 275px;
+    }
+    .vertical-text2 {
+        top: 0;
+    }
+    .volunteer_feedback_bg{
+        overflow-x: hidden;
+    }
 }
 
 

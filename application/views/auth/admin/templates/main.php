@@ -28,5 +28,6 @@
     </head>
     <body>
         <?php echo $contents?>	
+         <?php $this->load->view('auth/admin/templates/sections/footer') ?>	
     </body>
 </html>

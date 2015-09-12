@@ -9,7 +9,7 @@
         <meta name="og:title" content="buy and sales" />
         <meta name="og:description" content="soport website" />	
         <meta name="keywords" content=""/>
-        
+
         <link type='text/css' rel="stylesheet" href="<?php echo base_url(); ?>resources/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>resources/css/styles.css"/>
 
@@ -26,6 +26,7 @@
         </title>
     </head>
     <body>
-        <?php echo $contents?>	
+                    <?php echo $contents ?>	
+                    <?php $this->load->view('auth/member/templates/sections/footer') ?>	
     </body>
 </html>

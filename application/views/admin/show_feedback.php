@@ -1,15 +1,13 @@
-<div class="row form-group"></div>
-<div class="row form-group"></div>
-<div class="row form-group"></div>
 <div class="container">
+    <div class="volunteer_feedback_padding_top"></div>
     <div class="row" >
-        <div class="col-md-offset-2 col-md-8" style="background-color:#52B5CE; padding-left: 35px; padding-right: 35px;">
+        <div class="col-md-offset-2 col-md-8 volunteer_feedback_view_bg">
             <div class="row">
                 <div class="col-md-offset-3 col-md-9">
-                    <span class="header_text_style1 ">MUSLIMAND LIMITED</span>
+                    <span class="big_header_text">MUSLIMAND.COM</span>
                 </div>
             </div>
-            <table class="table table-bordered table-responsive form_responsive volunteer_form_content_bg">
+            <table class="table table-bordered table-responsive form_responsive volunteer_form_content_bg small_header_text">
                     <tr>
                         <td class="volunteerform_label_style">Name:</td>
                         <td><?php echo $feedback_info['name']; ?> </td>
@@ -81,4 +79,5 @@
             </table>
         </div>
     </div>
+    <div class="volunteer_feedback_padding_top"></div>
 </div>

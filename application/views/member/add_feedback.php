@@ -1,5 +1,5 @@
 <div class="reg_form_bg">
-    <div class="container form-group">
+    <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <div class="reg_form_content_bg">

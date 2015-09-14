@@ -41,6 +41,10 @@
                         <td><?php echo $feedback_info['cell']; ?> </td>
                     </tr>
                     <tr>
+                        <td class="volunteerform_label_style">Blood Group:</td>
+                        <td><?php echo $feedback_info['blood_group']; ?> </td>
+                    </tr>
+                    <tr>
                         <td class="volunteerform_label_style">Religion:</td>
                         <td><?php echo $feedback_info['religion']; ?> </td>
                     </tr>
@@ -69,8 +73,8 @@
                         <td><?php echo $feedback_info['hobbies_and_interests']; ?> </td>
                     </tr>
                     <tr>
-                        <td class="volunteerform_label_style">List of friends on facebook:</td>
-                        <td><?php echo $feedback_info['friend_list']; ?> </td>
+                        <td class="volunteerform_label_style">No of friends on facebook:</td>
+                        <td><?php echo $feedback_info['total_friends']; ?> </td>
                     </tr>
                     <tr>
                         <td class="volunteerform_label_style">Reference:</td>

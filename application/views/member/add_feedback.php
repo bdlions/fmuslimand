@@ -52,16 +52,7 @@
                                     <?php echo form_input($permanent_address + array('class' => 'form-control reg_form_control_custom')); ?>
                                 </div> 
                             </div>
-                            <div class="row form-group">
-                                <div class="col-md-4">
-                                    <label class="reg_form_label_style">Blood Group:</label>
-                                </div>
-                                <div class="col-md-8">
-                                    <input class="form-control reg_form_control_custom">
-                                    <?php //echo form_input($permanent_address + array('class' => 'form-control reg_form_control_custom')); ?>
-                                </div> 
-                            </div>
-
+                            
                             <div class="row form-group">
                                 <div class="col-md-4">
                                     <label class="reg_form_label_style">National ID:</label>
@@ -107,7 +98,16 @@
                                 </div>
                                 <div class="row form-group"></div>
                             </div>
-
+                            
+                            <div class="row form-group">
+                                <div class="col-md-4">
+                                    <label class="reg_form_label_style">Blood Group:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <?php echo form_input($blood_group + array('class' => 'form-control reg_form_control_custom')); ?>
+                                </div> 
+                            </div>
+                            
                             <div class="row form-group">
                                 <div class="col-md-4">
                                     <label class="reg_form_label_style">Religion:</label>
@@ -167,10 +167,10 @@
                             </div> 
                             <div class="row form-group">
                                 <div class="col-md-4">
-                                    <label class="reg_form_label_style">List of Friends on Facebook/other Social Site:</label>
+                                    <label class="reg_form_label_style">Number of Friends on Facebook/other Social Site:</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <?php echo form_textarea($list_of_friends_on_facebook + array('class' => 'form-control reg_form_control_custom textarea_custom')); ?>
+                                    <?php echo form_input($no_of_friends_on_facebook + array('class' => 'form-control reg_form_control_custom textarea_custom')); ?>
                                 </div>
                             </div> 
                             <div class="row form-group">

@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS `feedbacks` (
   `email` varchar(500) DEFAULT '',
   `skype` varchar(500) DEFAULT '',
   `cell` varchar(500) DEFAULT '',
+  `blood_group` varchar(500) DEFAULT '',
   `religion` varchar(500) DEFAULT '',
   `personal_statement` text DEFAULT '',  
   `academic_qualification` text DEFAULT '',  
@@ -15,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `feedbacks` (
   `knowledge_of_speciality` text DEFAULT '',
   `personal_skills` text DEFAULT '',  
   `hobbies_and_interests` text DEFAULT '',
-  `friend_list` text DEFAULT '',
+  `total_friends` int(11) unsigned DEFAULT 0,
   `reference` text DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

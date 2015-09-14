@@ -10,34 +10,50 @@ class Member extends CI_Controller {
     }
     public function index()
     {
+        $this->form_validation->set_error_delimiters("<div style='color:red'>", '</div>');
+        $this->form_validation->set_rules('name', 'Name', 'xss_clean|required');
+        $this->form_validation->set_rules('current_address', 'Current Address', 'xss_clean|required');
+        $this->form_validation->set_rules('permanent_address', 'Permanent Address', 'xss_clean|required');
+        $this->form_validation->set_rules('email', 'Email', 'xss_clean|required');
+        $this->form_validation->set_rules('cell', 'Cell', 'xss_clean|required');
+        $this->form_validation->set_rules('academic_qualification', 'Academic Qualification', 'xss_clean|required');
+        $this->form_validation->set_rules('personal_skills', 'Personal Skills', 'xss_clean|required');
+        $this->form_validation->set_rules('reference', 'Reference', 'xss_clean|required');
         if($this->input->post())
         {
-            $feedback_data = array(
-                'name' => $this->input->post('name'),
-                'current_address' => $this->input->post('current_address'),
-                'permanent_address' => $this->input->post('permanent_address'),
-                'national_id' => $this->input->post('national_id'),
-                'passport_id' => $this->input->post('passport_id'),
-                'email' => $this->input->post('email'),
-                'skype' => $this->input->post('skype'),
-                'cell' => $this->input->post('cell'),
-                'religion' => $this->input->post('religion'),
-                'personal_statement' => $this->input->post('personal_statement'),
-                'academic_qualification' => $this->input->post('academic_qualification'),
-                'volunteering_skills' => $this->input->post('volunteering_skills'),
-                'knowledge_of_speciality' => $this->input->post('knowledge_of_specialty'),
-                'personal_skills' => $this->input->post('personal_skills'),
-                'hobbies_and_interests' => $this->input->post('hobbies_and_interest'),
-                'friend_list' => $this->input->post('list_of_friends_on_facebook'),
-                'reference' => $this->input->post('reference'),                
-            );
-            $feedback_id = $this->feedback_model->add_feedback($feedback_data);
-            if($feedback_id !== FALSE){
-                $this->data['message'] = "Thank you for your inofrmation.";
-            }else{
-                $this->data['message'] = "System error. Please try again.";
-            } 
-            
+            if($this->form_validation->run() == true)
+            {
+                $feedback_data = array(
+                    'name' => $this->input->post('name'),
+                    'current_address' => $this->input->post('current_address'),
+                    'permanent_address' => $this->input->post('permanent_address'),
+                    'national_id' => $this->input->post('national_id'),
+                    'passport_id' => $this->input->post('passport_id'),
+                    'email' => $this->input->post('email'),
+                    'skype' => $this->input->post('skype'),
+                    'cell' => $this->input->post('cell'),
+                    'blood_group' => $this->input->post('blood_group'),
+                    'religion' => $this->input->post('religion'),
+                    'personal_statement' => $this->input->post('personal_statement'),
+                    'academic_qualification' => $this->input->post('academic_qualification'),
+                    'volunteering_skills' => $this->input->post('volunteering_skills'),
+                    'knowledge_of_speciality' => $this->input->post('knowledge_of_specialty'),
+                    'personal_skills' => $this->input->post('personal_skills'),
+                    'hobbies_and_interests' => $this->input->post('hobbies_and_interest'),
+                    'total_friends' => $this->input->post('no_of_friends_on_facebook'),
+                    'reference' => $this->input->post('reference'),                
+                );
+                $feedback_id = $this->feedback_model->add_feedback($feedback_data);
+                if($feedback_id !== FALSE){
+                    $this->data['message'] = "Thank you for your inofrmation.";
+                }else{
+                    $this->data['message'] = "System error. Please try again.";
+                }
+            }
+            else
+            {
+                $this->data['message'] = validation_errors();
+            }
         }
         $this->data['name'] = array(
             'id' => 'name',
@@ -82,7 +98,11 @@ class Member extends CI_Controller {
             'name' => 'cell',
             'type' => 'text',
         );
-        
+        $this->data['blood_group'] = array(
+            'id' => 'blood_group',
+            'name' => 'blood_group',
+            'type' => 'text',
+        );
         $this->data['religion'] = array(
             'id' => 'religion',
             'name' => 'religion',
@@ -123,10 +143,10 @@ class Member extends CI_Controller {
             'name' => 'hobbies_and_interest',
             'rows' => '1',
         );
-        $this->data['list_of_friends_on_facebook'] = array(
-            'id' => 'list_of_friends_on_facebook',
-            'name' => 'list_of_friends_on_facebook',
-            'rows' => '1',
+        $this->data['no_of_friends_on_facebook'] = array(
+            'id' => 'no_of_friends_on_facebook',
+            'name' => 'no_of_friends_on_facebook',
+            'type' => 'text',
         );
         $this->data['reference'] = array(
             'id' => 'reference',

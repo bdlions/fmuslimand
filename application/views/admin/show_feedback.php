@@ -7,6 +7,13 @@
                     <span class="big_header_text">MUSLIMAND.COM</span>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-1">
+                     <div class="feedback_vertical_text1">Volunteer</div> <div class="feedback_vertical_text2">Form</div>
+                </div>
+                 <div class="col-md-11"></div>
+            </div>
+            <div class="overflow_x">
             <table class="table table-bordered table-responsive form_responsive volunteer_form_content_bg small_header_text">
                     <tr>
                         <td class="volunteerform_label_style">Name:</td>
@@ -81,6 +88,7 @@
                         <td><?php echo $feedback_info['reference']; ?> </td>
                     </tr>
             </table>
+        </div>
         </div>
     </div>
     <div class="volunteer_feedback_padding_top"></div>

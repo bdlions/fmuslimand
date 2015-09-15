@@ -29,7 +29,7 @@ version:3.5/*
 .reg_form_control_custom{
     border-radius: 0;
     height: 30px;
-    color: #D2999D;
+    color: #555;
 }
 .reg_form_label_style{
     color: #fff;
@@ -59,17 +59,22 @@ version:3.5/*
     color: #fff;
 }
 .small_header_text{
-    color: #80D8A8;
+    color: #00B050;;
     font-family: cursive;
     font-size: 16.4px;
 }
-.vertical-text1, .vertical-text2 {
+.vertical-text1, .vertical-text2, .feedback_vertical_text1, .feedback_vertical_text2 {
     font-family: IcelandRegular;
     font-size: 40px;
     font-weight: bold;
     color: #00B050;
     text-transform: uppercase;
+}
+.vertical-text1, .vertical-text2{
     position: relative;
+}
+.feedback_vertical_text1, .feedback_vertical_text2 {
+    position: absolute;
 }
 
 .success_msg{
@@ -148,8 +153,8 @@ version:3.5/*
 }
 .volunteer_feedback_view_bg{
     background-color: #703684;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .footer_bg{
@@ -167,10 +172,22 @@ version:3.5/*
 
 }
 
+.feedback_vertical_text1, .feedback_vertical_text2 {
+        transform: rotate(270deg);
+    }
+    .feedback_vertical_text1 {
+        left: -115px;
+        top: 210px;
+    }
+    .feedback_vertical_text2 {
+        top: 38px;
+        left: -63px;
+    }
+
 
 @media (max-width: 480px) {
     .big_header_text{
-        font-size: 24px;
+        font-size: 20px;
     }
     .small_header_text{
         font-size: 14px;
@@ -186,6 +203,9 @@ version:3.5/*
         margin-top: -10px;
     }
     .volunteer_feedback_bg{
+        overflow-x: scroll;
+    }
+    .overflow_x{
         overflow-x: scroll;
     }
 }
@@ -206,6 +226,9 @@ version:3.5/*
     .volunteer_feedback_bg{
         overflow-x: scroll;
     }
+    .overflow_x{
+        overflow-x: no-display;
+    }
 }
 
 @media (min-width: 768px)and (max-width: 991px) { 
@@ -221,20 +244,28 @@ version:3.5/*
     .volunteer_feedback_bg{
         overflow-x: scroll;
     }
+    .overflow_x{
+       overflow-x: no-display;
+    }
 }
 
 @media (min-width: 992px) { 
-    .vertical-text1,.vertical-text2 {
+    .vertical-text1,.vertical-text2{
         transform: rotate(270deg);
     }
     .vertical-text1 {
         top: 275px;
+        left: -8px;
     }
     .vertical-text2 {
         top: 0;
+        left: -8px;
     }
     .volunteer_feedback_bg{
-        overflow-x: hidden;
+        overflow-x: scroll;
+    }
+    .overflow_x{
+        overflow-x: no-display;
     }
 }
 

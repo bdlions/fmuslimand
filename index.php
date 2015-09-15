@@ -14,6 +14,8 @@ define('ADMIN_LOGIN_SUCCESS_URI', 'auth');
 define('ADMIN_LOGIN_SUCCESS_TEMPLATE', 'auth/admin/templates/main');
 define('ADMIN_LOGIN_SUCCESS_VIEW', 'auth/index');
 
+define('MEMBER_LOGIN_TEMPLATE', 'templates/member_tmpl');
+
 define('MEMBER_LOGIN_SUCCESS_URI', 'auth');
 define('MEMBER_LOGIN_SUCCESS_TEMPLATE', 'auth/member/templates/main');
 define('MEMBER_LOGIN_SUCCESS_VIEW', 'auth/member/index');

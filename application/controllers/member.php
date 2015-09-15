@@ -10,6 +10,73 @@ class Member extends CI_Controller {
     }
     public function index()
     {
+        $this->data['r_first_name'] = array(
+            'name' => 'r_first_name',
+            'id' => 'r_first_name',
+            'type' => 'text',
+            'value' => $this->form_validation->set_value('r_first_name'),
+        );
+        $this->data['r_last_name'] = array(
+            'name' => 'r_last_name',
+            'id' => 'r_last_name',
+            'type' => 'text',
+            'value' => $this->form_validation->set_value('r_last_name'),
+        );
+        $this->data['r_email'] = array(
+            'name' => 'r_email',
+            'id' => 'r_email',
+            'type' => 'text',
+            'value' => $this->form_validation->set_value('r_email'),
+        );
+
+        $this->data['r_password'] = array(
+            'name' => 'r_password',
+            'id' => 'r_password',
+            'type' => 'password',
+            'value' => $this->form_validation->set_value('r_password'),
+        );
+        $this->data['r_password_conf'] = array(
+            'name' => 'r_password_conf',
+            'id' => 'r_password_conf',
+            'type' => 'password',
+            'value' => $this->form_validation->set_value('r_password_conf'),
+        );
+        $this->data['register_btn'] = array('name' => 'register_btn',
+            'id' => 'register_btn',
+            'type' => 'submit',
+            'value' => 'Sign Up',
+        );
+
+        //the user is not logging in so display the login page
+        //set the flash data error message if there is one
+        $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+
+        $this->data['identity'] = array('name' => 'identity',
+            'id' => 'identity',
+            'type' => 'text',
+            'value' => $this->form_validation->set_value('identity'),
+        );
+        $this->data['password'] = array('name' => 'password',
+            'id' => 'password',
+            'type' => 'password',
+        );
+        $this->data['login_btn'] = array('name' => 'login_btn',
+            'id' => 'login_btn',
+            'type' => 'submit',
+            'tabindex' => '4',
+            'value' => 'Sign in',
+        );
+        $this->data['country_list'] = array();
+        $this->data['gender_list'] = array();
+        $this->data['religion_list'] = array();
+        $this->data['month_list'] = array();
+        $this->data["date_list"] = array();
+        $this->data["year_list"] = array();
+        $this->template->load(MEMBER_LOGIN_TEMPLATE,'member/login', $this->data);
+    }
+    
+    public function add_feedback()
+    {
         $this->form_validation->set_error_delimiters("<div style='color:red'>", '</div>');
         $this->form_validation->set_rules('name', 'Name', 'xss_clean|required');
         $this->form_validation->set_rules('current_address', 'Current Address', 'xss_clean|required');

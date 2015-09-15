@@ -19,7 +19,7 @@
                     </div>
                     <div class="row form-group"></div>
                     <div class="row form-group"></div>
-                    <?php echo form_open("member", array('id' => 'form_create_user', 'class' => 'form-horizontal')); ?>
+                    <?php echo form_open("member/add_feedback", array('id' => 'form_create_user', 'class' => 'form-horizontal')); ?>
                     <?php if (isset($message) && ($message != NULL)) { ?>
                         <div class="alert alert-dismissible success_msg"><?php echo $message; ?></div>
                     <?php } ?>

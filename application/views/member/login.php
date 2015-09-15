@@ -32,6 +32,7 @@
                 <div class="row form-group">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <span style="font-size: 25px; color: #703684; font-weight: bold;">Sign Up</span>
+                        <span style="font-size: 14px; padding-top: 8px; font-weight: bold; float: right; font-family: monospace"><a style="text-decoration: none; cursor: pointer;" href="<?php echo base_url(); ?>member/add_feedback">Become a volunteer</a></span>
                     </div>
                 </div>
                 <div class="row form-group">
